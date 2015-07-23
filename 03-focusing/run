@@ -1,0 +1,3 @@
+#!/bin/sh
+sdcc -V -mpic14 -p16f873a main.c
+#packihx main.ihx > main.hex

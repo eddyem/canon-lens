@@ -1,0 +1,6 @@
+*~
+*.bak
+*.bck
+*.o
+.hg*
+.dropbox.attr
