@@ -1,0 +1,4 @@
+#!/bin/bash
+# find given command and print it with $2 lines of answer
+
+grep -A$2 "  $1  " *.dat 

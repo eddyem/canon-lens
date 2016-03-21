@@ -1,3 +1,4 @@
 #!/bin/bash
+# convert saleae logs into data files
 ./proc_exp canon.txt > $1.dat
 cp canon.txt $1.txt

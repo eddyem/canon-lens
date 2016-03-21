@@ -1,0 +1,9 @@
+#!/bin/bash
+# find in which file of all *dat exists command $1
+
+for f in *.dat; do
+  N=$(awk '{print $2}' $f | grep "$1" | wc -l)
+  if [ "$N" -ne 0 ]; then
+    printf "%-22s%d\n" $f $N
+  fi
+done

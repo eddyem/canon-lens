@@ -1,0 +1,9 @@
+#!/bin/bash
+# get commands list in all files (no args) or in given filelist
+
+[ "$*" = "" ] && LIST="*.dat" || LIST="$*"
+
+function upper(){ echo $1 | tr [:lower:] [:upper:]; }
+function hex2dec(){ echo "obase=10;ibase=16; $(upper $1)" | bc -l; }
+
+./proc_historgram ${LIST}| awk '{print $2}' | sort -u| while read x; do echo "$x : $(hex2dec $x)"; done

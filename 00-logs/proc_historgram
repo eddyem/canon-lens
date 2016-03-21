@@ -1,2 +1,4 @@
 #!/bin/bash
+# make histogram of commands/answers
+
 cat $* | awk '{print $2 " " $3}' | sort | uniq -c | sort -n
